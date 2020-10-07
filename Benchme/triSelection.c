@@ -5,21 +5,20 @@
  */
 
 /* 
- * File:   main.cpp
+ * File:   triSelection.c
  * Author: student
  *
- * Created on October 7, 2020, 11:44 AM
+ * Created on October 7, 2020, 11:45 AM
  */
 
-#include <cstdlib>
-
-using namespace std;
+#include <stdio.h>
+#include <stdlib.h>
 
 /*
  * 
  */
 int main(int argc, char** argv) {
 
-    return 0;
+    return (EXIT_SUCCESS);
 }
 

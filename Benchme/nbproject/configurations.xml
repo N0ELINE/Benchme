@@ -12,7 +12,10 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <itemPath>main.cpp</itemPath>
+      <itemPath>triBulle.c</itemPath>
+      <itemPath>triInsertion.c</itemPath>
+      <itemPath>triParTas.c</itemPath>
+      <itemPath>triSelection.c</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
                    displayName="Test Files"
@@ -36,7 +39,13 @@
       </toolsSet>
       <compileType>
       </compileType>
-      <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      <item path="triBulle.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="triInsertion.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="triParTas.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="triSelection.c" ex="false" tool="0" flavor2="0">
       </item>
     </conf>
     <conf name="Release" type="1">
@@ -59,7 +68,13 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
-      <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      <item path="triBulle.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="triInsertion.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="triParTas.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="triSelection.c" ex="false" tool="0" flavor2="0">
       </item>
     </conf>
   </confs>
