@@ -6,45 +6,20 @@
 
 /* 
  * File:   triParTas.c
- * Author: student
+ * @Author: noeline
  *
  * Created on October 7, 2020, 11:46 AM
  */
 
 #include <stdio.h>
 #include <stdlib.h>
+#include "utils.h"
 
 /*
- * 
+ * @param float *t tableau à trier, int k noeud de travail, int n taille du tableau
  */
-int main(int argc, char** argv) {
+void tamiser(float *t, int k, int n) {
 
-    float tableau[] = [10, 23, 505, 8];
-    int newtab = triParTas(tableau, 4);
-    for (int i = 0; i < 4; i++) {
-        printf("\n%d\n", newtab[i]);
-    }
-
-    float tableau[] = [25, 52, 36, 1, 2, 4];
-    int newtab = triParTas(tableau, 6);
-    for (int i = 0; i < 6; i++) {
-        printf("\n%d\n", newtab[i]);
-    }
-
-    float tableau[] = [2, 5, 32, 8, 1, 65];
-    int newtab = triParTas(tableau, 6);
-    for (int i = 0; i < 6; i++) {
-        printf("\n%d\n", newtab[i]);
-    }
-
-
-
-    return (EXIT_SUCCESS);
-}
-
-float *tamiser(float *t, int noeud, int n) {
-
-    int k = noeud;
     int j = 2 * k;
     float temp;
 
@@ -61,21 +36,26 @@ float *tamiser(float *t, int noeud, int n) {
         } else {
             j = n + 1;
         }
-        return t;
+        for (int i = 0; i < 4; i++) {
+            printf(" %f ", t[i]);
+           
+        }
+         printf("\n");
     }
 }
 
-float *triParTas(float *t, int n) {
+/*
+ * @param float *t tableau à trier, int n taille du tableau
+ */
+void triParTas(float *t, int n) {
 
-    int temp;
-    for (int i = n / 2; i < 1; i--) {
-        t = tamiser(t, i, n);
+    for (int i = 0; i < n/2; i++) {
+        tamiser(t, i, n);
     }
-    for (int i = n; i < 1; i--) {
-        temp = t[1];
-        t[1] = t[i];
-        t[i] = temp;
-        t = tamiser(t, 1, i - 1);
-    }
-    return t;
+//    for (int i = n; i >= 2; i--) {
+//        int temp = t[1];
+//        t[1] = t[i];
+//        t[i] = temp;
+//        tamiser(t, 1, i - 1);
+//    }
 }
