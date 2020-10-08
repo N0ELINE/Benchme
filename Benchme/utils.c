@@ -15,23 +15,32 @@
 #include <stdlib.h>
 
 /*
- * 
+ * Inversion d'un tableau
+ * @param t tableau à inverser, n taille du tableau à inverser
  */
-void inverser(int *T, int N) {
+void inverser(int *t, int n) {
     int i, j, temp;
-    for (i = 0, j = N - 1; i < j; i++, j--) {
-        temp = T[i];
-        T[i] = T[j];
-        T[j] = temp;
+    for (i = 0, j = n - 1; i < j; i++, j--) {
+        temp = t[i];
+        t[i] = t[j];
+        t[j] = temp;
     }
 }
 
+/*
+ * Generation d'un float aléatoire
+ * @return float aléatoire
+ */
 float randomeur() {
     float x = ("%d\n", rand() % 50000000);
-    x = x / 103.5;
+    x = x / 103.53;
     return x;
 }
 
+/*
+ * Affichage d'un tableau
+ * @param t tableau à inverser, n taille du tableau à inverser
+ */
 void afficherTab(float *tab, int n){
     for (int i=0;i<n;i++){
         printf("%f\n",tab[i]);

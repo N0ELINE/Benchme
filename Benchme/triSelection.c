@@ -6,7 +6,7 @@
 
 /* 
  * File:   triSelection.c
- * Author: student
+ * @Author: noeline
  *
  * Created on October 7, 2020, 11:45 AM
  */
@@ -16,9 +16,9 @@
 #include "utils.h"
 
 /*
- *
+ * @param float *t tableau à trier, int n taille du tableau
  */
-void selection(float *t, int n) {
+void triSelection(float *t, int n) {
     int i, mini, j, temp;
 
     for (i = 0; i < n - 1; i++) {
