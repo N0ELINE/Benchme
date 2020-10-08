@@ -7,7 +7,7 @@
 /* 
  * File:   triInsertion.c
  * Author: student
- *
+ **@author
  * Created on October 7, 2020, 11:45 AM
  */
 
@@ -17,57 +17,57 @@
 /*
  * 
  */
-int triinsert(float valeur[],float tailletab)
+void triInsertion(float tab[],int n)
 {
-    int i,j,tmp;
+    int i,j;
+    float x;
     
-    for (i=1; i <= tailletab;i++)
+    for (i=1; i <= n-1;i++)
     {
-        while (j>0 && valeur[j-1])
+        x = tab[i];
+        j=i;
+        while (j>0 && tab[j-1]>x)
         {
-            tmp = valeur[j];
-            valeur[j] = valeur[j-1];
-            valeur[j-1] = tmp;
-            
-            j--;
+            tab[j] = tab[j-1];
+            j = j-1;  
         }
+        tab[j]=x;
     }
-    return valeur;
 }
 
-int main(int argc, char** argv) {
-float tailletab = 0,i = 0;
-    for (i=0; i < tailletab; ++i)
-   {
-      
-    float* valeur = NULL;
-    float tri = 0;
-    printf("Combien de valeur avez vous?");
-    scanf("%f", &tailletab);
-
-    if (tailletab > 0) 
-    {
-        valeur = malloc(tailletab * sizeof(int)); 
-        if (valeur == NULL) 
-        {
-            exit(0); 
-        }
-        
-        for (i = 0 ; i < tailletab ; i++)
-        {
-            printf("Quel est la valeur numero %f ? ", i + 1);
-            scanf("%f", &valeur[i]);
-        }
-        tri = tribulle(valeur,tailletab);
-        printf("\n\n Voici les valeurs triées dans l'ordre croissant:\n");
-        for (i = 0 ; i < tailletab ; i++)
-        {
-            printf("%f ans\n", valeur[i]);
-        }
-
-        free(valeur);
-    }
-   }
-    return (EXIT_SUCCESS);
-}
+//int main(int argc, char** argv) {
+//int tailletab = 0,i = 0;
+//    for (i=0; i < tailletab; ++i)
+//   {
+//      
+//    float* tab = NULL;
+//    void tri = 0;
+//    printf("Combien de tab avez vous?");
+//    scanf("%f", &tailletab);
+//
+//    if (tailletab > 0) 
+//    {
+//        tab = malloc(tailletab * sizeof(int)); 
+//        if (tab == NULL) 
+//        {
+//            exit(0); 
+//        }
+//        
+//        for (i = 0 ; i < tailletab ; i++)
+//        {
+//            printf("Quel est la tab numero %f ? ", i + 1);
+//            scanf("%f", &tab[i]);
+//        }
+//        tri = triInsert(tab,tailletab);
+//        printf("\n\n Voici les tabs triées dans l'ordre croissant:\n");
+//        for (i = 0 ; i < tailletab ; i++)
+//        {
+//            printf("%f ans\n", tab[i]);
+//        }
+//
+//        free(tab);
+//    }
+//   }
+//    return (EXIT_SUCCESS);
+//}
 
