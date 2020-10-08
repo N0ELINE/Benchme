@@ -6,7 +6,7 @@
 
 /* 
  * File:   inverser.c
- * Author: student
+ * @Author: noeline
  *
  * Created on October 8, 2020, 10:44 AM
  */
